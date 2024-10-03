@@ -39,18 +39,20 @@ import '../styles/global.css';
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = item.getAttribute('data-scroll-to');
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetSection = item.getAttribute('data-scroll-to');
+      const targetElement = document.querySelector(`[data-section="${targetSection}"]`);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.warn(`Element with data-section="${targetSection}" not found`);
+      }
     });
   });
+});
 </script>
 </html>
