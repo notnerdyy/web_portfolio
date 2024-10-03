@@ -1,0 +1,126 @@
+---
+import "../styles/global.css";
+import { FaBehance } from "react-icons/fa";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const designProjects = [
+  {
+    title: "新福源花生夾心餅 | 品牌重塑",
+    tags: ["Package Design", "Branding"],
+    description: "以新竹老店新福源的人氣花生夾心餅乾為主，重新設計外包裝，採米白色搭配花生幾何圖形，提升送禮質感。此作品榮獲新竹文化節優選，展現了經典與現代視覺美感的融合。",
+    link: "https://www.behance.net/gallery/107447765/Package-",
+    linkText: "查看Behance",
+    image: ["11.png"]
+
+  }, 
+   {
+    title: "The Wave | UI設計",
+    tags: ["UI/UX Design"],
+    description: "The Wave 可以象徵流行文化與多媒體的浪潮，將藝人和粉絲連結在一起，隨著時代的節奏不斷更新和推動。這個名字強調了平台即時、動態的特性，反映出隨著藝人創作與粉絲互動所產生的連續性與影響力。",
+    link: "https://www.behance.net/gallery/107445911/UIUX-Music-Content-APP",
+    linkText: "查看Behance",
+    image: ["31.png"]
+  },
+  {
+    title: "獨立發聲 | 展場設計",
+    tags: ["Exhibition Design"],
+    description: "「獨立發聲」為 2020 畢業展打造的主視覺，以鮮明的視覺元素傳達設計師個體的創新精神與表達自由，強調個人創意在集體中的力量，展現設計界勇於發聲的精神風貌。",
+    link: "https://www.behance.net/gallery/107446013/-2020",
+    linkText: "查看Behance",
+    image: ["21.png","22.png"]
+  }
+];
+---
+
+<style>
+  .project {
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+    margin-left: 120px;
+  }
+  .tool-grid {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .img {
+    width: 335px;
+    height: 273px;
+    background-color: #CADD57;
+  }
+  .content{
+    max-width: 320px;
+  }
+
+ .content p {
+  width: 320px;
+ }
+ .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .tags li {
+    color: #ededed;
+    font-weight: 300;
+    background-color: #6562F5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    list-style-type: none;
+  }
+
+  .github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 42px;
+    text-decoration: none;
+    color: #333;
+  }
+</style>
+
+<section class="project mx-auto px-4 flex justify-start">
+  <div class="flex flex-col lg:flex-row justify-center max-w-6xl w-full">
+    <div>
+    <img class="px-4" src="/Vector.svg" alt="Vector" />
+    <h1 class="text-3xl pt-4">Design</h1>
+  </div>
+  <div class="projects-container">
+    {designProjects.map((project) => (
+      <div class="tool-grid">
+        <div class="img object-fill">
+        <img src={`/public/${project.image}`} alt={project.title} />
+      </div>
+        <div class="content">
+          <h1 class="text-2xl pb-2">{project.title}</h1>
+          <div class="tags">
+            <ul>
+              {project.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          </div>
+          <p class="text-gray-700">{project.description}</p>
+          <a href={project.link} class="github-link hover:opacity-80 transition-opacity py-2">
+            <FaBehance client:load />{project.linkText}
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+</section>

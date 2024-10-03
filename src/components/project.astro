@@ -1,0 +1,100 @@
+---
+import "../styles/global.css";
+import { FaGithub } from "react-icons/fa6";
+import demo from '../images/demo2.gif';
+import { Image } from 'astro:assets';
+---
+
+<style>
+  .project {
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tool-grid{
+    display: flex;
+    gap: 20px ;
+    margin-top: 40px;
+    margin-left: 120px;
+  }
+
+ .img {
+  width: 100%;
+  height: 100%;
+  background-color: #CADD57;
+  overflow: hidden; /* Add this line */
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .content{
+    max-width: 320px;
+  }
+
+ .content p {
+  width: 320px;
+ }
+ .tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .tags li {
+    color: #333333;
+    font-weight: 300;
+    background-color: #CADD57;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    list-style-type: none;
+  }
+
+  .github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: #333;
+  }
+</style>
+
+<section class="project mx-auto px-4 flex justify-start">
+  <div class="flex flex-col lg:flex-row justify-center max-w-6xl w-full">
+    <div>
+    <img class="px-4" src="/Vector.svg" alt="Vector" />
+    <h1 class="text-3xl pt-4">Project</h1>
+  </div>
+  <div class="tool-grid">
+  <div class="img">
+    <Image src={demo} alt="fdd" width={365} height={273} />
+
+  </div>
+  <div class="content">
+    <h1 class="text-2xl pb-2">Fundodo寵物複合式平台</h1>
+    <div class="tags">
+      <ul>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>RESTful API</li>
+        <li>AJAX</li>
+        <li>Axios</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <p class="text-gray-700">打造一個 SPA 架構的線上購物商城，具備商品展示、購物車（加入、調整數量、刪除單筆或全部購物車項目）、套用優惠券、結帳、寵物旅館等功能。</p>
+    <a href="https://github.com/notnerdyy/fdd_website" class="github-link hover:opacity-80 transition-opacity py-2">
+      <FaGithub client:load />
+      查看原始碼
+    </a>
+  </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+---
+
+<style>
+   .tool {
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px ;
+    margin-top: 40px;
+    margin-left: 240px;
+  }
+
+  .tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+</style>
+
+<section class="tool mx-auto px-4 flex justify-start">
+  <div class="flex flex-col lg:flex-row justify-center max-w-6xl w-full">
+    <div>
+    <img class="px-4" src="/Vector.svg" alt="Vector" />
+    <h1 class="text-3xl pt-4 ">Tooling</h1>
+  </div>
+  <div class="tool-grid">
+    <div class="tool-item">
+    <img src="/js.svg" alt="js" />
+    <p class="font-thin">JavaScript</p>
+  </div>
+  <div class="tool-item">
+    <img src="/sass.svg" alt="sass" />
+    <p class="font-thin">Sass</p>
+  </div>
+  <div class="tool-item">
+    <img src="/react.svg" alt="react" />
+    <p class="font-thin">React</p>
+  </div>
+  <div class="tool-item">
+    <img src="/git.svg" alt="git" />
+    <p class="font-thin">Git</p>
+  </div>
+  <div class="tool-item">
+    <img src="/ai.svg" alt="ai" />
+    <p class="font-thin">illustrator</p>
+  </div>
+  <div class="tool-item">
+    <img src="/node.svg" alt="node" />
+    <p class="font-thin">Node.js</p>
+  </div>
+  <div class="tool-item">
+    <img src="/php.svg" alt="php" />
+    <p class="font-thin">php</p>
+  </div>
+  <div class="tool-item">
+    <img src="/sql.svg" alt="sql" />
+    <p class="font-thin">MySQL</p>
+  </div>
+  <div class="tool-item">
+    <img src="/css.svg" alt="css" />
+    <p class="font-thin">Tailwind CSS</p>
+  </div>
+  <div class="tool-item">
+    <img src="/figma.svg" alt="figma" />
+    <p class="font-thin">Figma</p>
+  </div>
+  </div>
+  </div>
+</section>

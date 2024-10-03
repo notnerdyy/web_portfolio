@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+---
+
+<style>
+   .contact {
+    border-radius: 45px 45px 0 0 ;
+    background-color: #6562F5; /* 將背景色移到 contact */
+    display: flex; /* 使用 flexbox 來進行水平排列 */
+    flex-direction: column;
+    align-items: center; 
+    padding: 40px 15px;
+    position: relative;
+    min-height: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    .contact {
+      padding: 55px 60px;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .text {
+    color: #e0ddd6;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  p {
+    color: #cadd57;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 40px;
+    padding-bottom: 16px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+</style>
+
+<section class="w-full max-w-[1440px] mx-auto ">
+  <div class="contact">
+    <div class="content-wrapper">
+    <img src="/spark.svg" alt="" />
+    <h1 class="text">歡迎透過 <a
+      class="underline"
+      target="_blank"
+      href="mailto:liiaaxxli@gmail.com">Email</a
+    >來聯繫我
+  </h1>
+  </div>
+    <p>Designed in Figma and built with Astro @ Rena Lee 2024</p>
+  </div>
+  
+</section>

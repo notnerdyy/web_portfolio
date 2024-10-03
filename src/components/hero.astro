@@ -1,0 +1,66 @@
+---
+import "../styles/global.css";
+---
+
+<style>
+  .hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .intro {
+    width: 370px;
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    aspect-ratio: 460 / 446;
+  }
+
+  @media (min-width: 768px) {
+    .hero-image {
+      width: 460px;
+      height: 446px;
+    }
+  }
+</style>
+
+<section class="hero container mx-auto px-4">
+  <div class="flex flex-col lg:flex-row items-center justify-center max-w-6xl w-full">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="mb-8 md:mb-0">
+        <h1 class="text-4xl md:text-6xl text-slate-800 font-light mb-2">
+          Rena Lee
+        </h1>
+        <p class="text-xl md:text-2xl font-normal mb-6 text-gray-600">
+          前端工程師
+        </p>
+        <div class="intro mb-6 text-slate-700 max-w-md mx-auto lg:mx-0">
+          <p>
+            Hi 我是Rena <br />
+            我習慣從使用者的角度出發，深入思考並發掘問題，透過與團隊共同合作，產出既好用又能真正解決需求的產品，讓設計更具價值與實效性。
+          </p>
+        </div>
+        <div class="icon-container flex justify-center lg:justify-start space-x-4">
+          <a href="https://github.com/notnerdyy" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+            <img src="/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.cake.me/rouying-1bdc53" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+            <img src="/cv.svg" alt="cv" />
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center ml-8">
+        <img
+          src="/heroimg.png"
+          alt="Rena Lee"
+          class="hero-image object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
