@@ -1,32 +1,8 @@
 ---
 import '../styles/global.css';
 ---
-<html lang="en">
-<head>
-  <style>
-    .nav-item {
-      position: relative;
-      padding-bottom: 5px;
-      cursor: pointer;
-    }
-    .nav-item::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background-color: transparent;
-      transition: background-color 0.3s ease;
-    }
-    .nav-item:hover::after {
-      background-color: #6562F5;
-    }
-    .border {
-      border-bottom: 2px solid #888585;
-    }
-  </style>
-</head>
+
+
 <header class="w-full border-b-2 border-[#656565]">
   <nav class="flex items-center justify-center p-6">
     <ul class="flex space-x-12">
@@ -38,15 +14,44 @@ import '../styles/global.css';
   </nav>
 </header>
 
+<style>
+  .nav-item {
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  .nav-item:hover::after {
+    background-color: #6562F5;
+  }
+  .border {
+    border-bottom: 2px solid #888585;
+  }
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded event fired');
   const navItems = document.querySelectorAll('.nav-item');
+  console.log('找到導覽列物件:', navItems.length);
   navItems.forEach(item => {
     item.addEventListener('click', (e) => {
+      console.log("導覽列物件被點擊:', item.textContent");
       e.preventDefault();
       const targetSection = item.getAttribute('data-scroll-to');
+      console.log('target section:', targetSection);
       const targetElement = document.querySelector(`[data-section="${targetSection}"]`);
       if (targetElement) {
+        console.log('Target element found, scrolling');
         targetElement.scrollIntoView({ behavior: 'smooth' });
       } else {
         console.warn(`Element with data-section="${targetSection}" not found`);
