@@ -26,13 +26,38 @@ import "../styles/global.css";
     text-align: center;
   }
 
+  @media (max-width: 768px) {
+
+    .tool{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .tool-grid {
+      grid-template-columns: repeat(4,1fr);
+      gap: 10px;
+      justify-content: center;
+      margin-left: 0;
+
+    }
+
+    .icon {
+      width: 70px;
+      display: block;
+      margin: 0 auto; 
+    }
+
+  }
+
 
 </style>
 
 <section class="tool mx-auto px-4 flex justify-start">
   <div class="flex flex-col lg:flex-row justify-center max-w-6xl w-full">
     <div>
-    <img class="px-4" src="/Vector.svg" alt="Vector" />
+    <img class="icon px-4" src="/Vector.svg" alt="Vector" />
     <h1 class="text-3xl pt-4 ">Tooling</h1>
   </div>
   <div class="tool-grid">

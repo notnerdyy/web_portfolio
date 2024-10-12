@@ -14,11 +14,6 @@ import "../styles/global.css";
     min-height: 300px;
   }
 
-  @media (min-width: 1024px) {
-    .contact {
-      padding: 55px 60px;
-    }
-  }
 
   .content-wrapper {
     display: flex;
@@ -45,6 +40,19 @@ import "../styles/global.css";
     right: 0;
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    .contact {
+      min-height: 180px;
+    }
+    .content-wrapper img {
+      width: 40px;
+    }
+    .text {
+      font-size: 24px;
+    }
+    
+}
 </style>
 
 <section class="w-full max-w-[1440px] mx-auto ">

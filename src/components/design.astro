@@ -104,12 +104,45 @@ const designProjects = [
     text-decoration: none;
     color: #333;
   }
+
+
+  @media (max-width: 768px) {
+    .project{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .icon {
+      width: 70px;
+      display: block;
+      margin: 0 auto; 
+    }
+
+    .tool-grid{
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      gap: 30px;
+    }
+    .projects-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  .github-link {
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+  }
+
+  }
 </style>
 
 <section class="project mx-auto px-4 flex justify-start">
   <div class="flex flex-col lg:flex-row justify-center max-w-6xl w-full">
     <div>
-    <img class="px-4" src="/Vector.svg" alt="Vector" />
+    <img class="icon px-4" src="/Vector.svg" alt="Vector" />
     <h1 class="text-3xl pt-4">Design</h1>
   </div>
   <div class="projects-container">
